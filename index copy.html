@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhancing Robotic Skill Acquisition</title>
+    
+    <!-- 加载最新 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* GIF 之间的间距 */
+            flex-wrap: wrap; /* 小屏幕自动换行 */
+            margin-top: 20px;
+        }
+        img {
+            max-width: 48%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .paper-shadow {
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .center-table {
+            margin: auto;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Learning Multimodal Adaptive Grasping from Human Demonstrations with Visual, Tactile, and Gesture Guidance</h1>
+
+    <!-- 研究人员信息 -->
+
+    <!-- 代码 & 论文 -->
+
+    <hr>
+
+    <!-- Abstract -->
+    <h1>Abstract</h1>
+    <p>
+        In recent years, the demand for dexterity and adaptability in robotic grasping and manipulation tasks has increased significantly. However, existing methods face challenges in multimodal perception and high degree-of-freedom manipulation control. This study presents a multimodal learning framework that enables a five-fingered dexterous hand to achieve adaptive grasping and human-level manipulation capabilities using human demonstration data. The proposed framework extracts spatiotemporal features from visual, haptic, and end-effector gesture modalities and integrates them with a large-scale vision-language model for task understanding and subtask planning. Human demonstration data are collected using a WiseGlove tactile glove and a RealSense camera, with the hand operation process segmented into five phases: reach, contact, manipulation, release, and placement. An adaptive algorithm is developed to dynamically adjust the fingertip force and grasping speed to address force control during manipulation based on object properties and real-time feedback. Experimental results demonstrate that the method achieves smooth transitions and stable manipulation across objects with varying stiffness and compliance. In addition, the approach supports cross-object and cross-task generalization, significantly enhancing the robustness and accuracy of dexterous grasping and manipulation. 
+    </p>
+
+    <hr>
+
+    <!-- Demo Video -->
+    <h1>Demo Video</h1>
+    <div class="video-container">
+        <img src="./index_files/scenevideo.gif" alt="Scene Video" class="paper-shadow">
+        <img src="./index_files/audio.gif" alt="Audio Visualization" class="paper-shadow">
+    </div>
+
+    <hr>
+
+    <!-- Data Annotation -->
+    <h1>Data Annotation</h1>
+    <p>
+        During kitchen activity, human experts segmented actions of fine-grained primitives by observing the RGB video stream.
+        They also determined start and end frames of each action and mapped these events to involved sensors (e.g., gloves, EMG devices). 
+        The dataset contains fine-grained grasping action annotations.
+    </p>
+    <img src="./index_files/2.jpg" height="400px" class="paper-shadow">
+
+    <hr>
+
+    <!-- Data Recorder -->
+    <h1>Data Recorder</h1>
+    <p>
+        We show all results from our user study. Each user spent 1 minute per image. 
+        28 users were given minimal training and asked to annotate 10 images each. 
+        This is an extension of Figures 4 & 5 of our paper.
+    </p>
+    <img src="./index_files/3.jpg" height="400px" class="paper-shadow">
+
+    <hr>
+
+    <!-- Acknowledgements -->
+    <h1>Acknowledgements</h1>
+    <p>
+        This work was supported by the National Natural Science Foundation of China under Grant 62088101, Grant 62403366, and Grant 62403363. 
+        Also supported by the Shanghai Municipal Science and Technology Major Project under Grant 2021SHZDZX0100 and Grant 22ZR1467100.
+    </p>
+
+    <br><br>
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-75863369-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</body>
+</html>
