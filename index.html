@@ -45,7 +45,8 @@
 </head>
 <body>
 
-    <h1>Learning Multimodal Adaptive Grasping from Human Demonstrations with Visual, Tactile, and Gesture Guidance</h1>
+    <h1>Toward Human-Like Dexterity: A Multimodal Approach to Fine-Grained 
+        Robotic Manipulation</h1>
 
     <!-- 研究人员信息 -->
 
@@ -56,10 +57,56 @@
     <!-- Abstract -->
     <h1>Abstract</h1>
     <p>
-        In recent years, the demand for dexterity and adaptability in robotic grasping and manipulation tasks has increased significantly. However, existing methods face challenges in multimodal perception and high degree-of-freedom manipulation control. This study presents a multimodal learning framework that enables a five-fingered dexterous hand to achieve adaptive grasping and human-level manipulation capabilities using human demonstration data. The proposed framework extracts spatiotemporal features from visual, haptic, and end-effector gesture modalities and integrates them with a large-scale vision-language model for task understanding and subtask planning. Human demonstration data are collected using a WiseGlove tactile glove and a RealSense camera, with the hand operation process segmented into five phases: reach, contact, manipulation, release, and placement. An adaptive algorithm is developed to dynamically adjust the fingertip force and grasping speed to address force control during manipulation based on object properties and real-time feedback. Experimental results demonstrate that the method achieves smooth transitions and stable manipulation across objects with varying stiffness and compliance. In addition, the approach supports cross-object and cross-task generalization, significantly enhancing the robustness and accuracy of dexterous grasping and manipulation. 
+       Robotic manipulation tasks are evolving towards diversification and refinement. However, existing methods are limited by single-modal information and a lack of high-degree-of-freedom fine control capabilities. This study proposes a multimodal dexterous manipulation learning framework that enables a five-fingered dexterous hand to achieve human-level long sequence dexterous manipulation capabilities using human demonstration data. The framework collects human demonstration data using a WiseGlove glove and a RealSense camera, and the hand manipulation process is divided into five stages: approaching, grasping, manipulating, releasing, and placing, and combines them with visual language models (VLMs) for task understanding and subtask planning. An adaptive algorithm that dynamically adjusts the fingertip force threshold and grasping speed based on object characteristics and real-time feedback is also proposed to solve the problem of grasping collision and object deformation during operation. Experimental results show that the method can realize smooth transitions and stable operations between objects with different stiffness and flexibility. In addition, the method supports cross-target and cross-task generalization, which significantly improves the robustness and accuracy of dexterous grasping and manipulation.
     </p>
 
     <hr>
+
+    <!-- Demo Video -->
+    <h1>Demo Video</h1>
+    <div class="video-container">
+    <video class="paper-shadow" controls style="width:800px; height:auto;">
+        <source src="./index_files/1.mp4" type="video/mp4">
+    </video>
+    
+</div>
+
+    <hr>
+
+    <!-- Data Annotation -->
+    <h1>Methods</h1>
+    <p>
+        Overview of the human demonstration-driven robot execution pipeline.(A) Demo Video: Key frames from human demonstrations illustrate sequential actions for task segmentation. (B) Hand Motion and Tactile: A glove records joint angles and tactile data, providing motion-force features per phase. (C) Knowledge Bank: Encodes task primitives, object affordances, and gesture priors from large-scale data. (D) Task Plan: GPT-4o generates symbolic task plans from video and sensor input, including high-level commands and low-level pseudo-code, with time-aligned force and gesture annotations. Constraints: The system reasons over object-object-hand constraints using semantic and geometric rules (e.g., avoid side grasp under occlusion), enabling adaptive behavior. (E) Force Control: Executes phase-specific actions using adaptive force thresholds and tactile feedback.
+    </p>
+    <img src="./index_files/1.jpg" height="400px" class="paper-shadow">
+
+    <hr>
+
+    <!-- Data Recorder -->
+    <h1>Experimens</h1>
+    <div class="video-container">
+    <video controls style="width:400px; height:auto;">
+        <source src="./index_files/grasp_apple.mp4" type="video/mp4">
+    </video>
+    <video controls style="width:400px; height:auto;">
+        <source src="./index_files/圆筒.mp4" type="video/mp4">
+    </video>
+</div>
+
+    <!-- Acknowledgements -->
+    
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-75863369-3', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 </body>
 </html>
